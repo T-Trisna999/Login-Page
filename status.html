@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Status Koneksi</title>
+  <link rel="stylesheet" href="alogin.css">
+</head>
+<body>
+  <div class="login-box">
+    <h1>Status <span>Koneksi</span></h1>
+    <p>Username: <b>$(username)</b><br>
+       IP: $(ip)<br>
+       Uptime: $(uptime)<br>
+       Upload: $(bytes-in-nice)<br>
+       Download: $(bytes-out-nice)</p>
+    <form action="$(link-logout)" method="post">
+      <button type="submit">Logout</button>
+    </form>
+  </div>
+</body>
+</html>

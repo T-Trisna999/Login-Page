@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Hotspot</title>
+  <link rel="stylesheet" href="tlogin.css">
+</head>
+<body>
+  <div class="login-box">
+    <h1>Selamat Datang di <span>Hotspot</span></h1>
+    <p>Koneksi cepat, stabil, dan bebas gangguan. Nikmati internet seperti musik tanpa jeda 🎧</p>
+
+    <form action="$(link-login-only)" method="post" id="loginForm">
+      <input type="hidden" name="dst" value="$(link-orig)">
+      <input type="hidden" name="popup" value="true">
+      <input name="username" type="text" placeholder="Username" required>
+      <input name="password" type="password" placeholder="Password" required>
+      <button type="submit">Masuk Sekarang</button>
+    </form>
+
+    <div class="bottom-menu">
+      <a id="premiumBtn">Premium</a>
+      <a id="supportBtn">Support</a>
+      <a id="aboutBtn">Tentang</a>
+    </div>
+  </div>
+
+  <!-- POPUP PREMIUM -->
+<div id="popup-premium" class="popup">
+  <div class="popup-content">
+    <h2>Hotspot Premium</h2>
+    <div class="premium-features">
+      <div class="feature"><span>🔹</span> <span>Kecepatan tinggi</span></div>
+      <div class="feature"><span>🔹</span> <span>Tanpa batas waktu</span></div>
+      <div class="feature"><span>🔹</span> <span>Prioritas koneksi</span></div>
+      <div class="feature"><span>🔹</span> <span>Dukungan 24 jam</span></div>
+    </div>
+    <a href="https://wa.me/62895621673999?text=Halo%20Admin,%20saya%20ingin%20upgrade%20ke%20Premium">
+      <button class="close-btn">Hubungi Admin 💬</button>
+    </a>
+    <button class="close-btn" onclick="closePopup('popup-premium')">Tutup</button>
+  </div>
+</div>
+
+
+  <!-- POPUP SUPPORT -->
+  <div id="popup-support" class="popup">
+    <div class="popup-content">
+      <h2>Support</h2>
+      <p>Butuh bantuan login? Chat admin di WhatsApp 📱</p>
+      <a href="https://wa.me/62895621673999?text=Halo%20Admin,%20saya%20butuh%20bantuan%20login">
+        <button class="close-btn">💬 Chat Sekarang</button>
+      </a>
+      <button class="close-btn" onclick="closePopup('popup-support')">Tutup</button>
+    </div>
+  </div>
+
+  <!-- POPUP TENTANG -->
+  <div id="popup-about" class="popup">
+    <div class="popup-content">
+      <h2>Tentang Hotspot</h2>
+      <p>Hotspot ini dirancang dengan tema Spotify agar pengalaman login terasa modern dan cepat ⚡</p>
+      <button class="close-btn" onclick="closePopup('popup-about')">Tutup</button>
+    </div>
+  </div>
+
+  <script src="md5.js"></script>
+  <script>
+    document.getElementById("premiumBtn").onclick = () => openPopup('popup-premium');
+    document.getElementById("supportBtn").onclick = () => openPopup('popup-support');
+    document.getElementById("aboutBtn").onclick = () => openPopup('popup-about');
+
+    function openPopup(id) { document.getElementById(id).style.display = 'flex'; }
+    function closePopup(id) { document.getElementById(id).style.display = 'none'; }
+  </script>
+</body>
+</html>

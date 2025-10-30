@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Auto Login - Hotspot</title>
+  <link rel="stylesheet" href="tlogin.css">
+</head>
+<body>
+  <div class="login-box">
+    <h1><span>Spotify</span> Hotspot</h1>
+    <p>Menghubungkan otomatis ke jaringan...</p>
+    <form name="redirect" action="$(link-redirect)" method="get">
+      <input type="hidden" name="username" value="$(username)">
+      <button type="submit">Lanjutkan ➜</button>
+    </form>
+  </div>
+  <script>
+    setTimeout(() => document.redirect.submit(), 1500);
+  </script>
+</body>
+</html>
