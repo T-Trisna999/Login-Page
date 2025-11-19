@@ -1,0 +1,1 @@
+function hexMD5(a){return rstr2hex(rstrMD5(str2rstrUTF8(a)))};function rstrMD5(a){return binl2rstr(binlMD5(rstr2binl(a),a.length*8))};function rstr2hex(c){var a="0123456789abcdef",b="";for(var d=0;d<c.length;d++){b+=a.charAt((c.charCodeAt(d)>>>4)&15)+a.charAt(c.charCodeAt(d)&15)}return b};

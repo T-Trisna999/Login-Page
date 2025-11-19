@@ -1,0 +1,157 @@
+/* 🎧 Spotify Hotspot Theme - alogin.css */
+/* Warna utama: hijau neon (#1DB954) dan hitam matte */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #1db954, #0f0f0f);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Kotak login utama */
+.login-box {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 40px 30px;
+  border-radius: 20px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  transition: 0.3s;
+}
+
+.login-box:hover {
+  transform: scale(1.02);
+}
+
+/* Judul */
+h1 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+h1 span {
+  color: #1db954;
+}
+
+/* Deskripsi */
+p {
+  font-size: 14px;
+  color: #ddd;
+  margin-bottom: 25px;
+}
+
+/* Input dan tombol */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: #111;
+  color: white;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1db954;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #1ed760;
+}
+
+/* Footer Menu (Premium, Support, Tentang) */
+.bottom-menu {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.bottom-menu a {
+  color: #ccc;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.bottom-menu a:hover {
+  color: #1ed760;
+}
+
+/* Pop-up box */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: #111;
+  padding: 30px;
+  border-radius: 15px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 0 20px #1db954;
+}
+
+.popup-content h2 {
+  color: #1db954;
+  margin-bottom: 10px;
+}
+
+.popup-content p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.close-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #1db954;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  background: #1ed760;
+}
+
+.premium-features {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* jarak antar fitur */
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* jarak antara emoji dan teks */
+}
